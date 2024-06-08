@@ -75,7 +75,6 @@ class GenerateQA():
 
                 note_id = file.split(".")[0]
                 note_id = note_id.split("_")[0]
-                # print(file)
                 dictionary = {note_id: []}
                 PatientNote = ClinicalNotes[note_id]  ## access the corresponding clinical note.
                 flag = 0
