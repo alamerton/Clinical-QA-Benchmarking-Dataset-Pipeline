@@ -1,5 +1,5 @@
 # Benchmarking Dataset for Clinical Question Answering Large Language Models
-This is the repo for my MSc individual project: Production of a Benchmarking Dataset for Clinical Decision Reasoning Question-Answering Large Language Models. This repo contains the dataset generation code for the dataset. The high-level steps for the production of the dataset using this code are as follows:
+This is the repo for my MSc individual project: **Production of a Benchmarking Dataset for Clinical Decision Reasoning Question-Answering Large Language Models**. This repo contains the code for generating the dataset. The high-level steps for the production of the dataset using this code are as follows:
 1. Implementing the emrQA dataset generation framework from their paper
 2. Modifying the framework to create a dataset using the MIMIC-III data
 3. Developing the dataset based on the comparative analysis of the other major clinical QA benchmarking datasets, addressing their flaws
