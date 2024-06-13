@@ -54,7 +54,7 @@ template_file_path = args.templates_dir
 
 ## matching notes in temporal, coreference and relations dataset ##
 
-matching_notes = os.path.join("generation/i2b2_relations/", "matching_notes.csv")
+matching_notes = os.path.join("emrQA/generation/i2b2_relations/", "matching_notes.csv")
 
 ## output file paths ##
 
