@@ -963,7 +963,7 @@ class GenerateRelationsQuestions():
                 # print(events)
                 events_zip = zip(*events)
                 events_list = list(events_zip)
-                if "causes" in events_list[1] and "improves" in zip(*events)[1]:
+                if "causes" in events_list[1] and "improves" in events_list[1]:
                     print(Noteid)
                 for temp in events:
                     (event, status) = temp
@@ -1237,8 +1237,9 @@ class GenerateRelationsQuestions():
             if concept in coref_list:
 
                 #print(concept[0],zip(*coref_list)[0])
-                for idx in range(len(zip(*coref_list)[0])):
-                    coref_concept = zip(*coref_list)[0][idx]
+                list_coref_list = zip(*coref_list)
+                for idx in range(len(list_coref_list[0])):
+                    coref_concept = list_coref_list[0][idx]
                     sout = self.SimplePreProcess(coref_concept)
                     #out_list = list(coref_list[idx])
                     #out_list.append(sout) ############################ correct grammar ot not #############
