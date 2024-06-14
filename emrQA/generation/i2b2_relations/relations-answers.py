@@ -7,9 +7,6 @@ from nltk.stem import WordNetLemmatizer
 from nltk.corpus import wordnet as wn
 from problem_classfiers import concept_is_CommonNoun, concept_is_PastTense
 import json
-import sys
-# reload(sys)
-# sys.setdefaultencoding("ISO-8859-1")
 import random
 import argparse
 import os
