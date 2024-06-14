@@ -1160,8 +1160,9 @@ class GenerateRelationsQuestions():
 
         tag = nltk.pos_tag(nltk.word_tokenize(word))
         temp = zip(*tag)
-        words = list(temp[0])
-        tags = list(temp[1])
+        list_temp = list(temp)
+        words = list_temp[0]
+        tags = list_temp[1]
 
         if tags[0] == "DT":
             words[0] = ""

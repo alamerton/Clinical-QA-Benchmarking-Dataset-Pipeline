@@ -1,6 +1,8 @@
 from nltk.stem import WordNetLemmatizer
 import nltk
 from nltk.corpus import stopwords
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
 
 ## Open common names to use in is_common_noun function ##
 file = open("emrQA/generation/i2b2_relations/common_names.txt") ## you can use any set of common nouns to filter, here we call the top 500 high frequency words occuring in our templates as commoun nouns ##
