@@ -476,6 +476,8 @@ class GenerateRelationsQuestions():
         print(self.count_corefs)
         print(self.resolved_corefs)
 
+        print("RELATIONS OUT IS THIS: ", self.relations_out)
+
         with open(relations_qa_output_json, 'w') as outfile:
             json.dump(self.relations_out, outfile, ensure_ascii=False)
 
@@ -528,7 +530,9 @@ class GenerateRelationsQuestions():
                         print(question_list)
                         print(question_templates)
 
-                    unique_tup = list(set(zip(question_list, question_templates)))
+                    question_tuples = zip(question_list, question_templates)
+                    question_set = set(question_tuples)
+                    unique_tup = list(question_set)
 
                     if ql_csv_write:
 
@@ -954,7 +958,9 @@ class GenerateRelationsQuestions():
             try:
                 events = self.map_problems_to_treatment[Noteid][concept_cluster_1]
                 # print(events)
-                if "causes" in zip(*events)[1] and "improves" in zip(*events)[1]:
+                events_zip = zip(*events)
+                events_list = list(events_zip)
+                if "causes" in events_list[1] and "improves" in zip(*events)[1]:
                     print(Noteid)
                 for temp in events:
                     (event, status) = temp
