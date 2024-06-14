@@ -1162,6 +1162,7 @@ class GenerateRelationsQuestions():
         temp = zip(*tag)
         list_temp = list(temp)
         words = list_temp[0]
+        words = list(words)
         tags = list_temp[1]
 
         if tags[0] == "DT":
