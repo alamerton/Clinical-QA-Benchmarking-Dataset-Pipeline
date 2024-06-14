@@ -14,7 +14,7 @@ i2b2_obesity_challenge_directory = "emrQA/i2b2/obesity/"
 i2b2_smoking_challenge_directory = "emrQA/i2b2/smoking/"
 i2b2_coreference_challenge_directory = "emrQA/i2b2/coreference"
 
-templates_directory = "templates/templates-all.csv"
+templates_directory = "emrQA/templates/templates-all.csv"
 
 #################################### make output directory if it does not already exist #########################
 
