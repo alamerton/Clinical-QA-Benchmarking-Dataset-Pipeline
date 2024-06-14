@@ -1,3 +1,4 @@
+# MSc Individual Project - Clinical QA Benchmarking Dataset
 This is the repo for my MSc individual project: **Production of a Benchmarking Dataset for Clinical Decision Reasoning Question-Answering Large Language Models**. This repo contains the code for generating the dataset.
 ## Broad Scope of the Project
 I am part of a team of 5 MSc students working on a project with the goal of developing a large language model (LLM) that can be deployed in clinical settings to assist with clinicians' decision reasoning. Clinicians spend too much time manually reasoning about decisions when much of it can be automated thanks to the abundance of clinical data in electronic health records (EHR). An LLM can be fine-tuned to assist with that decision reasoning and decision making, reducing the amount of time clinicians would need to spend on it. At scale, this could significantly improve clinical processes.
