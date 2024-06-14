@@ -1188,8 +1188,9 @@ class GenerateRelationsQuestions():
         filter = " ".join(words) ## To make sure it makes sense you can use a parse#
         tag = nltk.pos_tag(nltk.word_tokenize(filter))
         temp = zip(*tag)
-        words = list(temp[0])
-        tags = list(temp[1])
+        list_temp = list(temp)
+        words = list_temp[0]
+        tags = list_temp[1]
 
         if len(set(["NN","NNS","jjR","JJS","JJ","NNP","NNPS","VB","VBG","VBP","VBZ"]).intersection(set(tags))) == 0:
             return None
