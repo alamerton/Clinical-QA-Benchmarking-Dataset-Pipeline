@@ -117,7 +117,7 @@ class GenerateRelationsQuestions():
         for paths in self.NoteFilePath:
             files = [f for f in listdir(paths) if isfile(join(paths, f))]
             for file in files:
-                remote_file = open(paths + file)
+                remote_file = open(paths + file, encoding='ISO-8859-1')
                 Noteid = file.split(".")[0]
                 self.ClinicalNotes[Noteid] = remote_file.readlines()
 
