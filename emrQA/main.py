@@ -38,7 +38,8 @@ for file in matching_files[1:]:
     if i2b2_relations_challenge_directory in file[0]:
         flag = 1
         break
-    new_file.append([os.path.join(i2b2_relations_challenge_directory,file[0]),os.path.join(i2b2_coreference_challeneg_directory,file[1])])
+    if len(file) > 1:
+        new_file.append([os.path.join(i2b2_relations_challenge_directory,file[0]),os.path.join(i2b2_coreference_challeneg_directory,file[1])])
 
 if flag == 0:
     ofile = open(matching_notes, "w")
