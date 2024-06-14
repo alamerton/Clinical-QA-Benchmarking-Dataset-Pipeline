@@ -12,7 +12,7 @@ i2b2_medications_challenge_directory = "emrQA/i2b2/medication/"
 i2b2_heart_disease_risk_challenge_directory = "emrQA/i2b2/heart-disease-risk/"
 i2b2_obesity_challenge_directory = "emrQA/i2b2/obesity/"
 i2b2_smoking_challenge_directory = "emrQA/i2b2/smoking/"
-i2b2_coreference_challeneg_directory = "emrQA/i2b2/coreference"
+i2b2_coreference_challenge_directory = "emrQA/i2b2/coreference"
 
 templates_directory = "templates/templates-all.csv"
 
@@ -39,7 +39,7 @@ for file in matching_files[1:]:
         flag = 1
         break
     if len(file) > 1:
-        new_file.append([os.path.join(i2b2_relations_challenge_directory,file[0]),os.path.join(i2b2_coreference_challeneg_directory,file[1])])
+        new_file.append([os.path.join(i2b2_relations_challenge_directory,file[0]),os.path.join(i2b2_coreference_challenge_directory,file[1])])
 
 if flag == 0:
     ofile = open(matching_notes, "w")
