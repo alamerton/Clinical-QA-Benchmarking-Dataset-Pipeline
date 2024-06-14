@@ -608,7 +608,10 @@ class GenerateRelationsQuestions():
                                    self.filewriter.writerow( ["##".join(paraphrase_questions)] + [logical_form] + [",".join(answer)] + [Note_val] + [Noteid + "_RelationsChallenge"] + [difference])
                                    '''
 
-                            answer_temp = {"answers": ans_list,"id": [zip(question_list, question_templates), logical_form_template], "question": list(paraphrase_questions)}
+                            zip_q_list_q_templates = zip(question_list, question_templates)
+                            list_q_list_q_templates = list(zip_q_list_q_templates)
+
+                            answer_temp = {"answers": ans_list,"id": [list_q_list_q_templates, logical_form_template], "question": list(paraphrase_questions)}
                             answer_out.append(answer_temp)
 
         return answer_out
