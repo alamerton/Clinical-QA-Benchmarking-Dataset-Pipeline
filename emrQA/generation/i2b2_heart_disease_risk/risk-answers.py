@@ -1523,10 +1523,12 @@ class RiskFileAnalysis():
                     #self.filewriter_forlform.writerow([unique_tup[qidx][0]] + [logical_form] + [unique_tup[qidx][1]] + [logical_form_orginal])
                     #print(unique_tup[qidx][0])
                     self.filewriter_forlform.writerow([unique_tup[qidx][0]] + [values[1]] + [unique_tup[qidx][1]] + [logical_form_orginal])
+                
+                values_zip = list(zip(*values[0]))
+                values_set = set(values_zip[0])
+                if values_set not in self.unique_questions:
 
-                if set(list(zip(*values[0])[0])) not in self.unique_questions:
-
-                    self.unique_questions.append(set(list(zip(*values[0])[0])))
+                    self.unique_questions.append(values_set)
                     ans_list = []
                     answers = values[2]
 
