@@ -472,11 +472,13 @@ class GenerateRelationsQuestions():
             total_questions += len(self.unique_questions)
             self.relations_out["paragraphs"].append(out_patient)
 
-        print(total_questions)
-        print(self.count_corefs)
-        print(self.resolved_corefs)
+        print("Total Questions: ", total_questions)
+        print("Corefs count: ", self.count_corefs)
+        print("Resolved corefs: ", self.resolved_corefs)
 
-        print("RELATIONS OUT IS THIS: ", self.relations_out)
+        # print("RELATIONS OUT IS THIS: ", self.relations_out)
+        # Replace any zip items in self.relations_out with list version
+        self.relations_out = [list(item) if isinstance(item, zip) else item for item in self.relations_out]
 
         with open(relations_qa_output_json, 'w') as outfile:
             json.dump(self.relations_out, outfile, ensure_ascii=False)

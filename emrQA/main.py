@@ -4,6 +4,8 @@ import os
 import csv
 
 PYTHON = sys.executable
+import nltk
+nltk.download('omw-1.4')
 
 #################################### set the full file paths ###############################################
 

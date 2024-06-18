@@ -6,8 +6,8 @@ import json
 import random
 import argparse
 import os
-reload(sys)
-sys.setdefaultencoding("ISO-8859-1")
+# reload(sys)
+# sys.setdefaultencoding("ISO-8859-1")
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--i2b2_dir', default='', help='Directory containing i2b2 heart disease risk challange files')
@@ -91,7 +91,7 @@ class RiskFileAnalysis():
                 if patient_id not in self.Patients:
                     self.Patients[patient_id] = []
 
-                ofile = open(TempFile, "w", 0)
+                ofile = open(TempFile, "w")
                 remote_file = open(paths + file)
                 for line in remote_file:
                     try:
