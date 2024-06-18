@@ -1472,6 +1472,8 @@ class RiskFileAnalysis():
             total_questions += len(self.unique_questions)
             self.relations_out["paragraphs"].append(out_patient)
 
+        self.relations_out = list(self.relations_out) # Turn set to list to prevent json set not subscriptable error
+
         with open(risk_qa_output_json, 'w') as outfile:
             json.dump(self.relations_out, outfile, ensure_ascii=False)
 
@@ -1524,9 +1526,9 @@ class RiskFileAnalysis():
                     #print(unique_tup[qidx][0])
                     self.filewriter_forlform.writerow([unique_tup[qidx][0]] + [values[1]] + [unique_tup[qidx][1]] + [logical_form_orginal])
                 
-                values_zip = list(zip(*values[0]))
-                values_set = set(values_zip[0])
-                if values_set not in self.unique_questions:
+                values_list = list(zip(*values[0]))
+                values_set = set(values_list[0])
+                if values_list not in self.unique_questions:
 
                     self.unique_questions.append(values_set)
                     ans_list = []
@@ -1545,7 +1547,7 @@ class RiskFileAnalysis():
                             #    print("line in note",PatientNote[int(val["evidence_start"]):int(val["evidence_start"]) + len(val["evidence"])])
                             ans_list.append(val)  # evidence will have q_line_answer_line
 
-                    answer_temp = {"answers": ans_list, "id": [values[0], logical_form_orginal],"question": list(list(zip(*values[0])[0]))}
+                    answer_temp = {"answers": ans_list, "id": [values[0], logical_form_orginal],"question": values_set}
                     answer_out.append(answer_temp)
 
         return answer_out
