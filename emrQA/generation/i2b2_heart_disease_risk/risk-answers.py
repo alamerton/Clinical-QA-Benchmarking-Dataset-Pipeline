@@ -112,7 +112,8 @@ class RiskFileAnalysis():
 
                 out = {}
                 for tuple in self.Patients[patient_id]:
-                    out[tuple[2].keys()[0]] = tuple[2][tuple[2].keys()[0]]
+                    keys = list(tuple[2].keys())
+                    out[keys[0]] = tuple[2][keys[0]]
 
                 self.RiskAnnotationsPerNote[patient_id][2].append(out)
                 self.RiskAnnotationsPerNote[patient_id][0].append(tuple[0])

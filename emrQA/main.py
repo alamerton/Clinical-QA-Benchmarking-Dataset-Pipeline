@@ -53,14 +53,14 @@ if flag == 0:
 ################################### run the generation scripts #######################################
 
 
-cmd = "{python} emrQA/generation/i2b2_medications/medication-answers.py --i2b2_dir={i2b2_dir} --templates_dir={templates_dir} --output_dir={output_dir}".format(python=PYTHON, i2b2_dir=i2b2_medications_challenge_directory, templates_dir=templates_directory, output_dir=output_directory)
-print(cmd)
-check_call(cmd, shell=True)
+# cmd = "{python} emrQA/generation/i2b2_medications/medication-answers.py --i2b2_dir={i2b2_dir} --templates_dir={templates_dir} --output_dir={output_dir}".format(python=PYTHON, i2b2_dir=i2b2_medications_challenge_directory, templates_dir=templates_directory, output_dir=output_directory)
+# print(cmd)
+# check_call(cmd, shell=True)
 
 
-cmd = "{python} emrQA/generation/i2b2_relations/relations-answers.py --i2b2_dir={i2b2_dir} --templates_dir={templates_dir} --output_dir={output_dir}".format(python=PYTHON, i2b2_dir=i2b2_relations_challenge_directory, templates_dir=templates_directory, output_dir=output_directory)
-print(cmd)
-check_call(cmd, shell=True)
+# cmd = "{python} emrQA/generation/i2b2_relations/relations-answers.py --i2b2_dir={i2b2_dir} --templates_dir={templates_dir} --output_dir={output_dir}".format(python=PYTHON, i2b2_dir=i2b2_relations_challenge_directory, templates_dir=templates_directory, output_dir=output_directory)
+# print(cmd)
+# check_call(cmd, shell=True)
 
 
 cmd = "{python} emrQA/generation/i2b2_heart_disease_risk/risk-answers.py --i2b2_dir={i2b2_dir} --templates_dir={templates_dir} --output_dir={output_dir}".format(python=PYTHON, i2b2_dir=i2b2_heart_disease_risk_challenge_directory, templates_dir=templates_directory, output_dir=output_directory)
@@ -68,14 +68,14 @@ print(cmd)
 check_call(cmd, shell=True)
 
 
-cmd = "{python} emrQA/generation/i2b2_smoking/smoking-answers.py --i2b2_dir={i2b2_dir} --templates_dir={templates_dir} --output_dir={output_dir}".format(python=PYTHON, i2b2_dir=i2b2_smoking_challenge_directory, templates_dir=templates_directory, output_dir=output_directory)
-print(cmd)
-check_call(cmd, shell=True)
+# cmd = "{python} emrQA/generation/i2b2_smoking/smoking-answers.py --i2b2_dir={i2b2_dir} --templates_dir={templates_dir} --output_dir={output_dir}".format(python=PYTHON, i2b2_dir=i2b2_smoking_challenge_directory, templates_dir=templates_directory, output_dir=output_directory)
+# print(cmd)
+# check_call(cmd, shell=True)
 
 
-cmd = "{python} emrQA/generation/i2b2_obesity/obesity-answers.py --i2b2_dir={i2b2_dir} --templates_dir={templates_dir} --output_dir={output_dir}".format(python=PYTHON, i2b2_dir=i2b2_obesity_challenge_directory, templates_dir=templates_directory, output_dir=output_directory)
-print(cmd)
-check_call(cmd, shell=True)
+# cmd = "{python} emrQA/generation/i2b2_obesity/obesity-answers.py --i2b2_dir={i2b2_dir} --templates_dir={templates_dir} --output_dir={output_dir}".format(python=PYTHON, i2b2_dir=i2b2_obesity_challenge_directory, templates_dir=templates_directory, output_dir=output_directory)
+# print(cmd)
+# check_call(cmd, shell=True)
 
 ##################  combine all the output files and generate the output in normal format ####################
 
