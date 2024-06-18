@@ -6,8 +6,6 @@ import json
 import random
 import argparse
 import os
-# reload(sys)
-# sys.setdefaultencoding("ISO-8859-1")
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--i2b2_dir', default='', help='Directory containing i2b2 heart disease risk challange files')
